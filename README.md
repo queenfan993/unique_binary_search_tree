@@ -1,17 +1,21 @@
 # Descriptions
-- a simple experiment for the charDev module construction under linux based env
-- use the module to print the numbers of the unique binary search tree with a given "n"
+- An experiment for the charDev module construction under linux based env.
+- Use the module to calculate the numbers of the unique binary search tree with a given "n".
 
 # Usage
+- Construct and load the module into the system.
 ```
 make check
 ```
+- Remove files other than the source code.
+```
+make clean
+```
 
 # UBST.c
-- the module implementation 
-- define the operations of the char Device 
+- The module implementation by define the operations of the char device.
 ```
-.owner = THIS_MODULE,
+    .owner = THIS_MODULE,
     .read = ubst_read,
     .write = ubst_write,
     .open = ubst_open,
@@ -21,5 +25,5 @@ make check
 
 # client.c
 - A program used to validate modules. 
-- test the write and the read operations
-- the results of the usbt module are stored in the out file
+- Test the read、write and llseek operations of char device. 
+- Put the results of the usbt module in the out file.
